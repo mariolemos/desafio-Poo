@@ -9,7 +9,7 @@ import java.util.Set;
 public class Bootcamp {
 
     private String nome;
-    private String descricai;
+    private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
@@ -24,11 +24,11 @@ public class Bootcamp {
     }
 
     public String getDescricai() {
-        return descricai;
+        return descricao;
     }
 
-    public void setDescricai(String descricai) {
-        this.descricai = descricai;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public LocalDate getDataInicial() {
@@ -60,11 +60,11 @@ public class Bootcamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bootcamp bootcamp = (Bootcamp) o;
-        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricai, bootcamp.descricai) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal);
+        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, descricai, dataInicial, dataFinal);
+        return Objects.hash(nome, descricao, dataInicial, dataFinal);
     }
 }
